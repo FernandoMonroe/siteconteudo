@@ -1,0 +1,394 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Apresentação comercial independente de Itaú Consórcio, sujeita a preenchimento com simulação oficial.">
+<title>Itaú Consórcio | Apresentação independente</title>
+<style>
+:root{--blue:#0046ff;--blue-deep:#0038cc;--head:#183b5e;--accent:#ec7000;--ink:#202c3a;--muted:#657386;--line:#e3e8ef;--paper:#fff;--canvas:#f5f7fa;--soft:#f5f8fc;--tint:#eef4ff;--warn:#fff8f0;--warn-line:#f2d9c0;--shadow:rgba(28,48,76,.08);color-scheme:light dark;font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--blue:#7fa2ff;--blue-deep:#9db8ff;--head:#dbe6f5;--ink:#e6edf5;--muted:#9aa8b8;--line:#2a3646;--paper:#17202c;--canvas:#0e141b;--soft:#1c2736;--tint:#1d2a40;--warn:#2a2118;--warn-line:#5a4128;--shadow:rgba(0,0,0,.4)}}
+:root[data-theme="dark"]{--blue:#7fa2ff;--blue-deep:#9db8ff;--head:#dbe6f5;--ink:#e6edf5;--muted:#9aa8b8;--line:#2a3646;--paper:#17202c;--canvas:#0e141b;--soft:#1c2736;--tint:#1d2a40;--warn:#2a2118;--warn-line:#5a4128;--shadow:rgba(0,0,0,.4)}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:calc(82px + env(safe-area-inset-top,0px))}
+body{margin:0;color:var(--ink);background:var(--canvas)}
+button,a{font:inherit}button{cursor:pointer}a{color:var(--blue)}
+.topbar{position:fixed;z-index:6;inset:0 0 auto;height:4px;background:var(--line);margin-top:env(safe-area-inset-top,0px)}
+.topbar-progress{width:10%;height:100%;background:var(--accent);transition:width .25s}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:7;background:var(--paper)}
+.brandbar{position:fixed;z-index:5;top:calc(4px + env(safe-area-inset-top,0px));left:0;right:0;height:66px;display:flex;align-items:center;justify-content:space-between;padding:0 max(18px,calc((100% - 1180px)/2));border-bottom:1px solid var(--line);background:var(--paper);box-shadow:0 4px 18px var(--shadow)}
+.brand{color:var(--blue-deep);font-size:14px;font-weight:800;letter-spacing:.04em}
+.brand small{display:block;margin-top:2px;color:var(--muted);font-size:10px;font-weight:550}
+.bar-actions{display:flex;align-items:center;gap:12px}
+.slide-count{padding:6px 10px;border:1px solid var(--line);border-radius:999px;background:var(--paper);color:var(--blue-deep);font-size:12px;font-weight:700;font-variant-numeric:tabular-nums}
+.icon-button{width:37px;height:37px;border:1px solid var(--line);border-radius:10px;color:var(--blue);background:var(--paper);font-size:18px}
+.slides{padding-top:calc(75px + env(safe-area-inset-top,0px))}
+.slide{display:flex;align-items:center;padding:42px 24px;scroll-margin-top:82px}
+.slide:not(.hero){padding:50px 24px;background:linear-gradient(135deg,var(--canvas),var(--soft))}
+.content{width:min(1100px,100%);margin:auto}
+.slide:not(.hero) .content{position:relative;overflow:hidden;padding:clamp(24px,4vw,46px);border:1px solid var(--line);border-radius:22px;background:var(--paper);box-shadow:0 16px 42px var(--shadow)}
+.slide:not(.hero) .content::before{content:"";position:absolute;top:0;left:clamp(24px,4vw,46px);width:58px;height:4px;background:linear-gradient(90deg,var(--accent),#ffad58);border-radius:0 0 4px 4px}
+.kicker{display:flex;align-items:center;gap:9px;margin:0 0 15px;color:var(--blue);font-size:11px;font-weight:800;letter-spacing:.16em;text-transform:uppercase}
+.kicker::before{content:"";width:22px;height:2px;border-radius:3px;background:var(--accent)}
+h1,h2,h3,p{margin-top:0}
+h1{max-width:830px;margin-bottom:20px;color:var(--blue);font-size:clamp(38px,6.5vw,72px);font-weight:760;letter-spacing:-.055em;line-height:1.02}
+h2{margin-bottom:14px;color:var(--head);font-size:clamp(28px,4vw,43px);letter-spacing:-.045em;line-height:1.1}
+h3{margin-bottom:9px;color:var(--head);font-size:18px;letter-spacing:-.025em}
+.lead{max-width:740px;margin-bottom:22px;color:var(--muted);font-size:16px;line-height:1.7}
+.hero{position:relative;overflow:hidden;min-height:min(610px,calc(100svh - 170px));margin:0 0 0;border:1px solid var(--line);border-radius:24px;background:linear-gradient(110deg,var(--paper),var(--soft) 60%,var(--tint));box-shadow:0 18px 48px var(--shadow)}
+.hero::before{content:"";position:absolute;top:11%;right:-78px;width:410px;height:410px;border:1px solid rgba(0,70,255,.12);border-radius:50%;box-shadow:0 0 0 34px rgba(0,70,255,.035),0 0 0 78px rgba(0,70,255,.025)}
+.hero .content{position:relative;padding:clamp(28px,5vw,62px) clamp(24px,6vw,76px)}
+.hero .lead{max-width:600px;font-size:clamp(16px,2vw,19px)}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;margin-bottom:25px;padding:8px 12px;border:1px solid var(--line);border-radius:999px;color:var(--blue-deep);background:var(--paper);font-size:11px;font-weight:700;letter-spacing:.06em}
+.hero-badge::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--accent)}
+.hero-meta{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+.meta-pill{padding:10px 14px;border:1px solid var(--line);border-radius:10px;background:var(--paper);font-size:12px}
+.hero-scroll{display:inline-flex;align-items:center;gap:10px;margin-top:30px;padding:10px 15px;border-radius:10px;color:#fff;background:var(--accent);font-size:13px;font-weight:700;text-decoration:none}
+.hero-scroll span{display:grid;width:23px;height:23px;place-items:center;border:1px solid rgba(255,255,255,.55);border-radius:50%}
+.about-card{display:grid;grid-template-columns:auto 1fr;gap:20px;align-items:center;max-width:760px;margin-top:26px;padding:clamp(20px,4vw,34px);border:1px solid var(--line);border-radius:18px;background:var(--paper);box-shadow:0 14px 34px var(--shadow)}
+.about-avatar{display:grid;width:76px;height:76px;place-items:center;border:1px solid var(--accent);border-radius:50%;color:#fff;background:linear-gradient(145deg,#0046ff,#0038cc);font-size:22px;font-weight:800}
+.about-card h3{font-size:clamp(22px,3vw,30px);color:var(--blue-deep)}
+.about-card p{margin:0;color:var(--muted);font-size:15px;line-height:1.75}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:16px}
+.step-num{display:grid;width:37px;height:37px;place-items:center;margin-bottom:13px;border:1px solid var(--line);border-radius:50%;color:var(--blue);background:var(--tint);font-size:13px;font-weight:800}
+.step h3{font-size:16px}.step p{margin:0;color:var(--muted);font-size:12px;line-height:1.55}
+.subtle-note{margin:20px 0 0;color:var(--muted);font-size:12px;line-height:1.6}
+.purchase-slide .content{max-width:900px}
+.purchase-panel{position:relative;overflow:hidden;margin-top:28px;padding:clamp(24px,5vw,52px);border:1px solid var(--line);border-radius:20px;background:var(--paper)}
+.purchase-panel::before{content:"";position:absolute;top:0;left:0;width:5px;height:100%;background:linear-gradient(180deg,var(--accent),#ffad58)}
+.purchase-panel p{color:var(--muted);font-size:clamp(15px,1.7vw,18px);line-height:1.75}
+.purchase-amount{display:block;margin:10px 0 20px;color:var(--blue-deep);font-size:clamp(34px,6vw,58px);font-weight:800;letter-spacing:-.05em}
+.purchase-metrics{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin:22px 0}
+.purchase-metric{padding:17px;border:1px solid var(--line);border-radius:13px;background:var(--soft)}
+.purchase-metric:first-child{border-top:2px solid var(--accent)}
+.purchase-metric span{display:block;margin-bottom:7px;color:var(--muted);font-size:11px;font-weight:700;letter-spacing:.04em;text-transform:uppercase}
+.purchase-metric strong{color:var(--blue-deep);font-size:clamp(17px,2.4vw,24px)}
+.purchase-note{margin:20px 0 0;padding:15px 18px;border-left:3px solid var(--accent);border-radius:0 10px 10px 0;background:var(--warn);font-size:13px!important;line-height:1.6!important}
+.summary-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:28px 0}
+.summary-item{position:relative;display:grid;gap:8px;overflow:hidden;padding:20px;border:1px solid var(--line);border-radius:16px;background:var(--paper);box-shadow:0 8px 22px var(--shadow)}
+.summary-item:first-child::before{content:"";position:absolute;inset:0 auto 0 0;width:3px;background:var(--accent)}
+.summary-item span,.details-line span{color:var(--muted);font-size:11px;font-weight:700;letter-spacing:.04em;text-transform:uppercase}
+.summary-item strong{color:var(--blue-deep);font-size:clamp(18px,2.2vw,27px);letter-spacing:-.03em;overflow-wrap:anywhere}
+.quick-sim{margin-top:30px;padding:23px;border:1px solid var(--line);border-radius:18px;background:var(--paper)}
+.quick-sim-head{display:flex;justify-content:space-between;gap:12px;margin-bottom:18px}
+.quick-sim-head h3{margin-bottom:4px}.quick-sim-head p{margin:0;color:var(--muted);font-size:12px}
+.illustrative-tag{align-self:flex-start;padding:6px 9px;border:1px solid var(--line);border-radius:999px;color:var(--blue-deep);background:var(--tint);font-size:10px;font-weight:800}
+.range-field{margin:16px 0}
+.range-label{display:flex;justify-content:space-between;gap:12px;color:var(--muted);font-size:12px}
+.range-label output{color:var(--blue-deep);font-size:15px;font-weight:800}
+input[type=range]{display:block;width:100%;height:7px;margin:13px 0 12px;border-radius:99px;background:linear-gradient(90deg,var(--accent) var(--p,50%),var(--line) var(--p,50%));appearance:none;-webkit-appearance:none;touch-action:pan-x}
+input[type=range]::-webkit-slider-thumb{width:23px;height:23px;border:4px solid #fff;border-radius:50%;background:var(--accent);box-shadow:0 2px 8px rgba(0,0,0,.25);-webkit-appearance:none}
+input[type=range]::-moz-range-thumb{width:15px;height:15px;border:4px solid #fff;border-radius:50%;background:var(--accent)}
+.range-ends{display:flex;justify-content:space-between;color:var(--muted);font-size:10px}
+.quick-result{display:flex;align-items:baseline;justify-content:space-between;gap:12px;margin-top:16px;padding:14px 15px;border:1px solid var(--line);border-radius:12px;background:var(--soft)}
+.quick-result span{color:var(--muted);font-size:12px}.quick-result strong{color:var(--blue-deep);font-size:20px}
+.quick-disclaimer{margin:12px 0 0;color:var(--muted);font-size:10px;line-height:1.55}
+.details-line{display:grid;grid-template-columns:repeat(4,1fr);gap:11px;margin-top:18px}
+.details-line label{display:grid;gap:7px;min-width:0;padding:12px;border:1px solid var(--line);border-radius:11px;background:var(--paper)}
+.details-line input{width:100%;min-width:0;height:35px;padding:0 9px;border:1px solid var(--line);border-radius:8px;color:var(--blue-deep);background:var(--soft);font:inherit;font-size:13px;font-weight:650}
+.details-line input:focus{outline:none;border-color:var(--blue);box-shadow:0 0 0 3px rgba(0,70,255,.12)}
+.details-line input::placeholder{color:var(--muted);font-size:11px;font-weight:500}
+.details-status{min-height:18px;margin:10px 2px 0;color:var(--blue);font-size:11px}
+.details-status.error{color:#c0392b}
+.choice-row{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+.choice{display:flex;align-items:center;gap:15px;padding:19px;border:1px solid var(--line);border-radius:14px;background:var(--paper)}
+.choice-icon{display:grid;width:42px;height:42px;flex:none;place-items:center;border-radius:12px;color:var(--blue);background:var(--tint);font-size:20px}
+.choice h3{margin-bottom:4px;font-size:16px}.choice p{margin:0;color:var(--muted);font-size:12px;line-height:1.5}
+.contact-card{position:relative;overflow:hidden;padding:clamp(24px,5vw,48px);border-radius:20px;color:#fff;background:linear-gradient(120deg,#0038cc,#0046ff);box-shadow:0 14px 34px rgba(0,70,255,.18)}
+.contact-card h2{color:#fff}.contact-card p{color:#edf3ff;line-height:1.65}
+.contact-link{display:inline-flex;align-items:center;min-height:46px;padding:0 18px;border-radius:9px;color:#0038cc;background:#fff;font-size:13px;font-weight:750;text-decoration:none}
+.disclaimer{margin:22px 0 10px;color:var(--muted);font-size:11px;line-height:1.6}
+.sources{margin:0;color:var(--muted);font-size:11px}
+.bottomnav{display:flex;align-items:center;justify-content:center;gap:14px;min-height:66px;padding:10px 18px calc(10px + env(safe-area-inset-bottom,0px));border-top:1px solid var(--line);background:var(--paper)}
+.nav-button{min-height:40px;padding:0 16px;border:1px solid var(--line);border-radius:10px;color:var(--blue-deep);background:var(--paper);font-size:12px;font-weight:750}
+.nav-button.primary{border-color:var(--accent);color:#fff;background:var(--accent)}
+.nav-button:disabled{cursor:not-allowed;opacity:.45}
+.dots{display:flex;gap:6px}
+.dot{width:8px;height:8px;padding:0;border:0;border-radius:50%;background:var(--line)}
+.dot[aria-current=step]{width:21px;border-radius:99px;background:var(--accent)}
+.sr-only{position:absolute;width:1px;height:1px;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap}
+button:focus-visible,a:focus-visible,input:focus-visible{outline:3px solid rgba(0,70,255,.35);outline-offset:3px}
+@media(max-width:760px){
+.brandbar{height:58px;padding:0 14px}.brand{font-size:12px}.slides{padding-top:calc(67px + env(safe-area-inset-top,0px))}
+.slide{padding:26px 13px}.slide:not(.hero){padding:24px 13px}.slide:not(.hero) .content{padding:23px 18px;border-radius:17px}
+.hero{border-radius:17px}.hero .content{padding:24px}
+.summary-grid{gap:7px}.summary-item{padding:12px 9px;min-width:0}.summary-item strong{font-size:clamp(12px,3.55vw,15px)}
+.details-line{grid-template-columns:repeat(2,1fr);gap:8px}
+.choice-row,.purchase-metrics,.steps{grid-template-columns:1fr}
+.about-card{grid-template-columns:1fr}.about-avatar{width:62px;height:62px;font-size:19px}
+.dot{width:6px;height:6px}.dot[aria-current=step]{width:16px}.nav-button{padding:0 11px}}
+@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition-duration:.01ms!important}}
+@media print{@page{size:A4 landscape;margin:10mm}body{background:#fff}body::before,.topbar,.brandbar,.bottomnav{display:none!important}.slides{padding:0}.slide{break-after:page}}
+</style>
+</head>
+<body>
+<div class="topbar" aria-hidden="true"><div class="topbar-progress" id="progress"></div></div>
+<header class="brandbar">
+  <div class="brand"><span>ITAÚ CONSÓRCIO<small>Apresentação comercial independente</small></span></div>
+  <div class="bar-actions">
+    <span class="slide-count" id="count" aria-live="polite">01 / 10</span>
+    <button class="icon-button" id="print" type="button" aria-label="Imprimir ou salvar como PDF" title="Imprimir / salvar em PDF">⎙</button>
+  </div>
+</header>
+
+<main class="slides" id="slides">
+  <section class="slide hero active" aria-label="Abertura">
+    <div class="content">
+      <p class="kicker">Uma proposta para o seu próximo passo</p>
+      <span class="hero-badge">APRESENTAÇÃO INDEPENDENTE</span>
+      <h1>Itaú Consórcio</h1>
+      <p class="lead">Planeje sua próxima conquista com uma proposta feita para o seu objetivo.</p>
+      <div class="hero-meta">
+        <span class="meta-pill" id="hero-product">Modalidade: selecione na proposta</span>
+        <span class="meta-pill">Simulação: não informada</span>
+      </div>
+      <a class="hero-scroll" href="#proposta">Role para conhecer a proposta <span aria-hidden="true">↓</span></a>
+    </div>
+  </section>
+
+  <section class="slide" aria-label="Sobre a empresa e o corretor">
+    <div class="content">
+      <p class="kicker">Sobre a Empresa / Corretor</p>
+      <h2>Atendimento especializado para o seu próximo passo.</h2>
+      <article class="about-card">
+        <div class="about-avatar" aria-hidden="true">LC</div>
+        <div>
+          <h3>Leonardo Cabral</h3>
+          <p>Consultor especializado em consórcios, pronto para te ajudar a conquistar seu bem com a melhor estratégia financeira.</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="slide" aria-label="Como funciona">
+    <div class="content">
+      <p class="kicker">Formas de comprar</p>
+      <h2>Existem três formas de comprar um bem: à vista, financiado ou por consórcio.</h2>
+      <p class="lead">Nas próximas páginas, veja um exemplo separado para cada opção, considerando um veículo de R$ 60.000,00. Os valores são ilustrativos.</p>
+      <h3>Como funciona o consórcio</h3>
+      <div class="steps">
+        <div class="step"><span class="step-num">1</span><h3>Escolha seu plano</h3><p>Confira crédito, parcela e prazo.</p></div>
+        <div class="step"><span class="step-num">2</span><h3>Participe do grupo</h3><p>Acompanhe as assembleias.</p></div>
+        <div class="step"><span class="step-num">3</span><h3>Use seu crédito</h3><p>Após contemplação e validações.</p></div>
+      </div>
+      <p class="subtle-note">Contemplação por sorteio ou lance, conforme as regras do grupo. Não há prazo garantido.</p>
+    </div>
+  </section>
+
+  <section class="slide purchase-slide" aria-label="Exemplo de compra à vista">
+    <div class="content">
+      <p class="kicker">Exemplo 1 de 3 · À vista</p>
+      <h2>Comprar à vista</h2>
+      <div class="purchase-panel">
+        <p>Imagine que você escolheu um veículo anunciado por</p>
+        <strong class="purchase-amount">R$ 60.000,00</strong>
+        <p>Você paga o valor combinado de uma vez, usando o dinheiro que já tem disponível. Depois de concluir a compra e a documentação, o veículo fica com você.</p>
+        <div class="purchase-metrics">
+          <div class="purchase-metric"><span>Pagamento</span><strong>Uma vez</strong></div>
+          <div class="purchase-metric"><span>Valor do exemplo</span><strong>R$ 60.000,00</strong></div>
+        </div>
+        <p class="purchase-note">O valor final pode mudar conforme negociação, documentação e demais custos da compra. Exemplo ilustrativo.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide purchase-slide" aria-label="Exemplo de compra financiada">
+    <div class="content">
+      <p class="kicker">Exemplo 2 de 3 · Financiado</p>
+      <h2>Comprar financiado</h2>
+      <div class="purchase-panel">
+        <p>Para o mesmo veículo de R$ 60.000,00, imagine dar uma entrada de</p>
+        <strong class="purchase-amount">R$ 15.000,00</strong>
+        <p>O saldo de R$ 45.000,00 seria financiado em 48 meses. Com uma taxa hipotética de 1,5% ao mês, a parcela ficaria em torno de R$ 1.321,87.</p>
+        <div class="purchase-metrics">
+          <div class="purchase-metric"><span>Entrada</span><strong>R$ 15.000,00</strong></div>
+          <div class="purchase-metric"><span>Parcelas hipotéticas</span><strong>48 × R$ 1.321,87</strong></div>
+        </div>
+        <p class="purchase-note">Neste cálculo ilustrativo, entrada + parcelas totalizam cerca de R$ 78.449,76. Não inclui tarifas, impostos ou outros custos. A taxa e as condições reais dependem da instituição financeira e da análise de crédito.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide purchase-slide" aria-label="Exemplo de compra por consórcio">
+    <div class="content">
+      <p class="kicker">Exemplo 3 de 3 · Consórcio</p>
+      <h2>Comprar por consórcio</h2>
+      <div class="purchase-panel">
+        <p>Imagine uma carta de crédito de</p>
+        <strong class="purchase-amount">R$ 60.000,00</strong>
+        <p>Em um exemplo simplificado de 60 meses, dividir o crédito pelo prazo dá R$ 1.000,00 por mês, antes das taxas e demais valores previstos no contrato.</p>
+        <div class="purchase-metrics">
+          <div class="purchase-metric"><span>Crédito do exemplo</span><strong>R$ 60.000,00</strong></div>
+          <div class="purchase-metric"><span>Prazo e referência mensal</span><strong>60 × R$ 1.000,00*</strong></div>
+        </div>
+        <p class="purchase-note">*Referência matemática, não é parcela oficial. O crédito só pode ser usado após a contemplação e as validações previstas. A contemplação ocorre por sorteio ou lance, conforme as regras do grupo, e não tem prazo garantido.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide" id="proposta" aria-label="Sua proposta">
+    <div class="content">
+      <p class="kicker">Sua proposta</p>
+      <h2>Um plano. Seus próximos passos.</h2>
+      <div class="summary-grid">
+        <article class="summary-item"><span>Crédito escolhido</span><strong id="summary-credit">R$ 200.000,00</strong></article>
+        <article class="summary-item"><span>Prazo escolhido</span><strong id="summary-term">100 meses</strong></article>
+        <article class="summary-item"><span>Referência mensal¹</span><strong id="summary-monthly">R$ 2.000,00</strong></article>
+      </div>
+      <div class="quick-sim" aria-labelledby="quick-sim-title">
+        <div class="quick-sim-head">
+          <div><h3 id="quick-sim-title">Simulação rápida</h3><p>Arraste para ajustar os valores.</p></div>
+          <span class="illustrative-tag">ILUSTRATIVA</span>
+        </div>
+        <div class="range-field">
+          <label class="range-label" for="quick-credit"><span>Valor de crédito</span><output id="quick-credit-output" for="quick-credit">R$ 200.000,00</output></label>
+          <input id="quick-credit" type="range" min="20000" max="1000000" step="10000" value="200000" aria-label="Valor de crédito hipotético">
+          <div class="range-ends" aria-hidden="true"><span>R$ 20 mil</span><span>R$ 1 milhão</span></div>
+        </div>
+        <div class="range-field">
+          <label class="range-label" for="quick-term"><span>Prazo hipotético</span><output id="quick-term-output" for="quick-term">100 meses</output></label>
+          <input id="quick-term" type="range" min="12" max="100" step="1" value="100" aria-label="Prazo hipotético em meses">
+          <div class="range-ends" aria-hidden="true"><span>12 meses</span><span>100 meses</span></div>
+        </div>
+        <div class="quick-result"><span>Divisão simples do crédito pelo prazo</span><strong id="quick-monthly">R$ 2.000,00</strong></div>
+        <p class="quick-disclaimer">Apenas referência matemática (crédito ÷ prazo), não é parcela de consórcio nem condição comercial do Itaú Consórcio. Não inclui taxa, fundo, seguro, reajustes ou outros encargos. Confirme os valores da proposta antes de contratar.</p>
+      </div>
+      <div class="details-line" aria-label="Dados editáveis da proposta">
+        <label><span>Modalidade</span><input id="proposal-product" type="text" maxlength="60" placeholder="Ex.: imóvel ou veículo"></label>
+        <label><span>Grupo</span><input id="proposal-group" type="text" maxlength="40" placeholder="Digite o grupo"></label>
+        <label><span>Taxa de administração</span><input id="proposal-fee" type="text" inputmode="decimal" maxlength="6" placeholder="Digite a taxa (%)"></label>
+        <label><span>Índice de reajuste</span><input id="proposal-index" type="text" maxlength="60" placeholder="Conforme a proposta"></label>
+      </div>
+      <p class="details-status" id="details-status" aria-live="polite">Edite os campos acima; o resumo é atualizado automaticamente.</p>
+      <p class="subtle-note">¹ Referência matemática (crédito ÷ prazo), sem taxas ou encargos. Não representa parcela oficial.</p>
+    </div>
+  </section>
+
+  <section class="slide" aria-label="Contemplação">
+    <div class="content">
+      <p class="kicker">Contemplação</p>
+      <h2>Sorteio ou lance.</h2>
+      <p class="lead">As possibilidades dependem das regras e dos recursos do grupo.</p>
+      <div class="choice-row">
+        <article class="choice"><span class="choice-icon" aria-hidden="true">↻</span><div><h3>Sorteio</h3><p>Participação conforme o contrato e as assembleias.</p></div></article>
+        <article class="choice"><span class="choice-icon" aria-hidden="true">↗</span><div><h3>Lance</h3><p>Oferta sujeita às modalidades e critérios do grupo.</p></div></article>
+      </div>
+      <p class="subtle-note">Contemplação não é garantida. Confira no regulamento as regras e eventuais limites de lance.</p>
+    </div>
+  </section>
+
+  <section class="slide" aria-label="Atendimento e informações">
+    <div class="content">
+      <p class="kicker">Vamos conversar?</p>
+      <div class="contact-card">
+        <h2>Seu próximo passo começa com uma conversa.</h2>
+        <p>Confirme os valores e as condições da sua simulação antes de contratar.</p>
+        <a class="contact-link" href="#proposta">Voltar à proposta ↗</a>
+      </div>
+      <p class="disclaimer">Material independente; não é uma oferta ou documento oficial do Itaú Consórcio. Valores, taxas, prazos e regras devem ser confirmados com o consultor e dependem da proposta e do contrato do grupo. A contemplação depende de sorteios, lances e regras contratuais; não é garantida.</p>
+      <p class="sources">Confirme as condições atualizadas diretamente com o consultor Itaú.</p>
+    </div>
+  </section>
+</main>
+
+<nav class="bottomnav" aria-label="Navegação dos slides">
+  <button class="nav-button" id="previous" type="button">← Anterior</button>
+  <div class="dots" id="dots" role="group" aria-label="Selecionar slide"></div>
+  <button class="nav-button primary" id="next" type="button">Próximo →</button>
+</nav>
+<p id="announcement" class="sr-only" aria-live="polite"></p>
+
+<script>
+(() => {
+  "use strict";
+  const slides = Array.from(document.querySelectorAll(".slide"));
+  const $ = id => document.getElementById(id);
+  const progress = $("progress"), count = $("count"), previous = $("previous"), next = $("next"), dots = $("dots");
+  let current = -1;
+  const money = v => new Intl.NumberFormat("pt-BR", {style:"currency", currency:"BRL"}).format(v);
+
+  const qc = $("quick-credit"), qt = $("quick-term");
+  function updateSim() {
+    const credit = Number(qc.value), term = Number(qt.value), monthly = credit / term;
+    $("quick-credit-output").textContent = money(credit);
+    $("quick-term-output").textContent = term + " meses";
+    $("quick-monthly").textContent = money(monthly);
+    $("summary-credit").textContent = money(credit);
+    $("summary-term").textContent = term + " meses";
+    $("summary-monthly").textContent = money(monthly);
+    qc.style.setProperty("--p", ((credit - qc.min) / (qc.max - qc.min)) * 100 + "%");
+    qt.style.setProperty("--p", ((term - qt.min) / (qt.max - qt.min)) * 100 + "%");
+  }
+  qc.addEventListener("input", updateSim);
+  qt.addEventListener("input", updateSim);
+
+  const fields = ["proposal-product", "proposal-group", "proposal-fee", "proposal-index"].map($);
+  const [productInput, groupInput, feeInput, indexInput] = fields;
+  const status = $("details-status");
+  function updateDetails() {
+    const product = productInput.value.trim(), group = groupInput.value.trim();
+    const rawFee = feeInput.value.trim(), index = indexInput.value.trim();
+    $("hero-product").textContent = "Modalidade: " + (product || "selecione na proposta");
+    const details = [];
+    if (product) details.push(product);
+    if (group) details.push("grupo " + group);
+    if (rawFee) {
+      const fee = Number(rawFee.replace(",", "."));
+      if (!/^\d{1,3}(?:[.,]\d{1,2})?$/.test(rawFee) || !Number.isFinite(fee) || fee > 100) {
+        status.classList.add("error");
+        status.textContent = "Informe a taxa entre 0 e 100%, usando até duas casas decimais.";
+        return;
+      }
+      details.push("taxa " + new Intl.NumberFormat("pt-BR", {maximumFractionDigits:2}).format(fee) + "%");
+    }
+    if (index) details.push("reajuste " + index);
+    status.classList.remove("error");
+    status.textContent = details.length
+      ? "Prévia editável: " + details.join(" · ") + ". Confirme os dados na simulação oficial."
+      : "Edite os campos acima; o resumo é atualizado automaticamente.";
+  }
+  fields.forEach(f => f.addEventListener("input", updateDetails));
+
+  function setCurrent(i) {
+    const n = Math.max(0, Math.min(i, slides.length - 1));
+    if (n === current) return;
+    current = n;
+    slides.forEach((s, p) => s.classList.toggle("active", p === n));
+    count.textContent = String(n + 1).padStart(2, "0") + " / " + String(slides.length).padStart(2, "0");
+    previous.disabled = n === 0;
+    next.disabled = n === slides.length - 1;
+    Array.from(dots.children).forEach((d, p) => p === n ? d.setAttribute("aria-current", "step") : d.removeAttribute("aria-current"));
+    $("announcement").textContent = "Slide " + (n + 1) + " de " + slides.length;
+  }
+  function showSlide(i) {
+    const t = Math.max(0, Math.min(i, slides.length - 1));
+    slides[t].scrollIntoView({behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block: "start"});
+    setCurrent(t);
+  }
+  let pending = false;
+  function onScroll() {
+    pending = false;
+    const marker = innerHeight * 0.32;
+    let vis = 0;
+    slides.forEach((s, i) => { if (s.getBoundingClientRect().top <= marker) vis = i; });
+    setCurrent(vis);
+    const h = document.documentElement.scrollHeight - innerHeight;
+    progress.style.width = Math.max(0, Math.min(h > 0 ? scrollY / h * 100 : 0, 100)) + "%";
+  }
+  slides.forEach((s, i) => {
+    const d = document.createElement("button");
+    d.type = "button"; d.className = "dot";
+    d.setAttribute("aria-label", "Ir para slide " + (i + 1));
+    d.addEventListener("click", () => showSlide(i));
+    dots.appendChild(d);
+  });
+  previous.addEventListener("click", () => showSlide(current - 1));
+  next.addEventListener("click", () => showSlide(current + 1));
+  $("print").addEventListener("click", () => window.print());
+  addEventListener("scroll", () => { if (!pending) { pending = true; requestAnimationFrame(onScroll); } });
+  addEventListener("resize", onScroll);
+  updateSim(); updateDetails(); setCurrent(0); onScroll();
+})();
+</script>
+</body>
+</html>
